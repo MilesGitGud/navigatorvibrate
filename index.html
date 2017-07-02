@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./jquery.js"></script>
+    <title>Calculadora de média</title>
+    <meta name="Description" content="Why not?">
+    <meta name="Keywords" content="calculadoramedia">
+  </head>
+  <body>
+    <div class="wrapper">
+      <center>
+        <h3>navigator.vibrate</h3>
+        <div class="embed">
+          <input id="m1b" type="number" placeholder="Tempo (ms)" spellcheck="none" class="embed-block">
+          <button class="notatxt">Vibrar</button>
+        </div>
+      </center>
+    </div>
+
+    <script type="text/javascript">
+      $(".notatxt").click(function(){
+        var m1b = parseInt($("#m1b").val());
+        if(m1b < 1) m1b = 1;
+        navigator.vibrate(m1b);
+      });
+    </script>
+  </body>
+</html>
